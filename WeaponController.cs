@@ -5,6 +5,7 @@ public class WeaponController : MonoBehaviour {
 
 	protected PlayerController player;
 	protected GameObject mainCamera;
+	public GameObject endOfBarrel;
 
 	public void setPlayerController(PlayerController playerController)
 	{

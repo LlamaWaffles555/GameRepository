@@ -4,7 +4,6 @@ using System.Collections;
 public class ConventionalWeapon : WeaponController {
 
 	public GameObject bullet;
-	public GameObject bulletSpawn;
 
 	private float fireRateTimer;
 	private bool reloading;
@@ -87,7 +86,7 @@ public class ConventionalWeapon : WeaponController {
 		RaycastHit hit;
 		Physics.Raycast (mainCamera.transform.position, mainCamera.transform.forward, out hit);
 		print("Shooting!");
-		GameObject shot = (GameObject) Instantiate (bullet, bulletSpawn.transform.position, Quaternion.identity);
+		GameObject shot = (GameObject) Instantiate (bullet, endOfBarrel.transform.position, Quaternion.identity);
 		Quaternion direction;
 		if (hit.collider != null) {
 			direction = Quaternion.FromToRotation(shot.transform.forward, hit.point - shot.transform.position);
