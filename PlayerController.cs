@@ -112,10 +112,12 @@ public class PlayerController : MonoBehaviour {
 				if (Input.GetMouseButtonDown(0))
 				{
 					gun.OnClick();
-				} else if (Input.GetMouseButtonUp(0))
+				}
+				else if (Input.GetMouseButtonUp(0))
 				{
 					gun.OnStopClick();
-				} else if (Input.GetMouseButton(0))
+				}
+				else if (Input.GetMouseButton(0))
 				{
 					gun.OnHoldClick();
 				}
